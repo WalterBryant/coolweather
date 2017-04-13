@@ -4,6 +4,8 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <!-- 和风天气  个人认证key: dbe8c86799714ba890c846dd3049cb94 -->
+
     <application
         android:name="org.litepal.LitePalApplication"
         android:allowBackup="true"
@@ -20,8 +22,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".WeatherActivity" />
-    </application>
 
-    <!--和风天气  个人认证key: dbe8c86799714ba890c846dd3049cb94-->
+        <service
+            android:name=".service.AutoUpdateService"
+            android:enabled="true"
+            android:exported="true"/>
+    </application>
 
 </manifest>
